@@ -99,18 +99,16 @@ class App extends Component {
   };
 
   closeModal = event => {
-console.dir(event.target)
-      if (event.code  && event.code !== "Escape") {
-        return
-      }
-      
-      if (event.target.nodeName !== "IMG"){
-        this.setState({
-          isModalOpen: false
-        });
-      }
-      window.onkeydown = null;
-    
+    if (event.code && event.code !== "Escape") {
+      return;
+    }
+
+    if (event.target.nodeName !== "IMG") {
+      this.setState({
+        isModalOpen: false
+      });
+    }
+    window.onkeydown = null;
   };
 
   render() {
